@@ -1,4 +1,5 @@
 var dataloaded = false;
+var datanumLoaded = 0;
 async function getCSData() {
     let obj;
     const result = await fetch('csharpdata.json');
