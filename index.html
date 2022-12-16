@@ -48,6 +48,84 @@
                 </div>
             </div>
         </nav>
+        <div class="d-none d-xl-block">
+            <div class="row my-5">
+                <div class="col-1"></div>
+                <div class="col-2">
+                    <div class="card my-3">
+                        <div class="card-body">
+                            <h5 class="card-title">C#</h5>
+                            <p class="card-text">A collection of my so far completed C# programs in and out of
+                                school
+                            </p>
+                            <a class="btn btn-primary" onclick="update('CS');">View</a>
+                            <a href="https://github.com/K-Marcell/CSHARP" class="btn btn-primary">Github Link</a>
+                        </div>
+                    </div>
+                    <div class="card my-3">
+                        <div class="card-body">
+                            <h5 class="card-title">Python</h5>
+                            <p class="card-text">A collection of my so far completed Py programs in and out of
+                                school
+                            </p>
+                            <a class="btn btn-primary" onclick="update('PY');">View</a>
+                            <a href="https://github.com/K-Marcell/PYTHON" class="btn btn-primary">Github Link</a>
+                        </div>
+                    </div>
+                    <div class="card my-3">
+                        <div class="card-body">
+                            <h5 class="card-title">Web</h5>
+                            <p class="card-text">A collection of my so far completed Web-related programs in and out
+                                of
+                                school</p>
+                            <a class="btn btn-primary" onclick="update('HTML');">View</a>
+                            <a href="https://github.com/K-Marcell/WEBP" class="btn btn-primary">Github Link</a>
+                        </div>
+                    </div>
+                    <div class="card my-3">
+                        <div class="card-body">
+                            <h5 class="card-title">Database</h5>
+                            <p class="card-text">A collection of my so far completed Database related tasks in and
+                                out
+                                of
+                                school</p>
+                            <a class="btn btn-primary" onclick="update('SQL');">View</a>
+                            <a href="https://github.com/K-Marcell/ADATBAZIS" class="btn btn-primary">Github Link</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-8">
+                    <div class="container w-100 h-100 bg-light">
+                        <p class="h3" id="cardType">TITLE</p>
+                        <div class="container border" id="tasksCont">
+                            <select name="Task" class="form-select" size="3" id="selectTask"
+                                onchange="displayTask(this);">
+
+                            </select>
+                            <div id="chosenTask">
+                                <div class="row">
+                                    <div class="col-7">
+                                        <p id="taskTitle" class="h1">title</p>
+                                        <p id="taskDescription" class="p">description</p>
+                                    </div>
+                                    <div class="col-5">
+                                        <p class="h3">Data</p>
+                                        <p class="p" id="taskData"></p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-11"></div>
+                                    <div class="col-1"><button type="button" id="taskButton" onclick="openTaskSRC();"
+                                            class="btn btn-dark">Visit Code</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div class="d-block d-xl-none overflow-hidden">
             <div class="row">
                 <div class="col-3 bg-light">
@@ -79,83 +157,6 @@
                             <button type="button" id="taskButton" onclick="openTaskSRC();"
                                 class="pull-right btn btn-dark">Visit
                                 Code</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="d-none d-xl-block">
-                <div class="row my-5">
-                    <div class="col-1"></div>
-                    <div class="col-2">
-                        <div class="card my-3">
-                            <div class="card-body">
-                                <h5 class="card-title">C#</h5>
-                                <p class="card-text">A collection of my so far completed C# programs in and out of
-                                    school
-                                </p>
-                                <a class="btn btn-primary" onclick="update('CS');">View</a>
-                                <a href="https://github.com/K-Marcell/CSHARP" class="btn btn-primary">Github Link</a>
-                            </div>
-                        </div>
-                        <div class="card my-3">
-                            <div class="card-body">
-                                <h5 class="card-title">Python</h5>
-                                <p class="card-text">A collection of my so far completed Py programs in and out of
-                                    school
-                                </p>
-                                <a class="btn btn-primary" onclick="update('PY');">View</a>
-                                <a href="https://github.com/K-Marcell/PYTHON" class="btn btn-primary">Github Link</a>
-                            </div>
-                        </div>
-                        <div class="card my-3">
-                            <div class="card-body">
-                                <h5 class="card-title">Web</h5>
-                                <p class="card-text">A collection of my so far completed Web-related programs in and out
-                                    of
-                                    school</p>
-                                <a class="btn btn-primary" onclick="update('HTML');">View</a>
-                                <a href="https://github.com/K-Marcell/WEBP" class="btn btn-primary">Github Link</a>
-                            </div>
-                        </div>
-                        <div class="card my-3">
-                            <div class="card-body">
-                                <h5 class="card-title">Database</h5>
-                                <p class="card-text">A collection of my so far completed Database related tasks in and
-                                    out
-                                    of
-                                    school</p>
-                                <a class="btn btn-primary" onclick="update('SQL');">View</a>
-                                <a href="https://github.com/K-Marcell/ADATBAZIS" class="btn btn-primary">Github Link</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-8">
-                        <div class="container w-100 h-100 bg-light">
-                            <p class="h3" id="cardType">TITLE</p>
-                            <div class="container border" id="tasksCont">
-                                <select name="Task" class="form-select" size="3" id="selectTask"
-                                    onchange="displayTask(this);">
-
-                                </select>
-                                <div id="chosenTask">
-                                    <div class="row">
-                                        <div class="col-7">
-                                            <p id="taskTitle" class="h1">title</p>
-                                            <p id="taskDescription" class="p">description</p>
-                                        </div>
-                                        <div class="col-5">
-                                            <p class="h3">Data</p>
-                                            <p class="p" id="taskData"></p>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-11"></div>
-                                        <div class="col-1"><button type="button" id="taskButton"
-                                                onclick="openTaskSRC();" class="btn btn-dark">Visit Code</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>
