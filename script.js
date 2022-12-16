@@ -2,7 +2,7 @@ var dataloaded = false;
 var datanumLoaded = 0;
 async function getData(type) {
     let obj;
-    const result = await fetch('data/data.json');
+    const result = await fetch('data.json');
     obj = await result.json();
     switch (type) {
         case 'CS':
