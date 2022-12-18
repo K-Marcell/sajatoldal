@@ -5,3 +5,31 @@
 #chosenTask {
     display: none;
 }
+
+#mainC {
+    transform: scale(0);
+}
+
+.card {
+    margin-left: 15%;
+}
+
+.mainC {
+    animation-name: userChoose;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes userChoose {
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
